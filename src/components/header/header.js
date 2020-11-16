@@ -11,15 +11,15 @@ import ava from '../../assets/media/icon/avatar.png';
 const Header = () => {
   return (
     <HeaderWrap>
-      <Link activeClassName="active" to='/'>
+      <Link to='/'>
         <Logo>Logo</Logo>
       </Link>
       <NavList>
-        <Link activeClassName="active" to='/schedule'>Расписание</Link>
-        <Link activeClassName="active" to='/students'>Ученики</Link>
-        <Link activeClassName="active" to='/homework'>Домашние задания</Link>
-        <Link activeClassName="active" activeStyle={{ color: 'red' }}  to='/courses' >Курсы</Link>
-        <Link activeClassName="active" to='/selection'>Полезное</Link>
+        <Link to='/schedule'>Расписание</Link>
+        <Link to='/students'>Ученики</Link>
+        <Link to='/homework'>Домашние задания</Link>
+        <Link to='/courses' >Курсы</Link>
+        <Link to='/selection'>Полезное</Link>
       </NavList>
       <AvatarBlock>
         <img className="bell" src={bell} alt="img"/>

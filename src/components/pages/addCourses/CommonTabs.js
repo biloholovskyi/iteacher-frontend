@@ -1,20 +1,19 @@
 import React from 'react';
-import styled from "styled-components";
+import TemplateItem from "./TemplateItem";
+// styled
+import {CommonWrap} from './addCoursesStyle';
 
-const Common = () => {
+const CommonTabs = () => {
   return (
     <CommonWrap>
-      <p>1</p>
+      <TemplateItem/>
+      <TemplateItem/>
+      <TemplateItem/>
+      <TemplateItem/>
+      <TemplateItem/>
+      <TemplateItem/>
     </CommonWrap>
   )
 }
 
-export default Common;
-
-const CommonWrap = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-   height: 100vh;
-`
+export default CommonTabs;

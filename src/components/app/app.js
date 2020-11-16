@@ -8,6 +8,7 @@ import Students from "../pages/students/students";
 import HomeWork from "../pages/homeWork/homeWork";
 import Selection from "../pages/selection/selection";
 import AddCourses from "../pages/addCourses/addCourses";
+import SingleCourses from "../pages/singleCourses/singleCourses";
 
 import './app.css';
 
@@ -23,6 +24,7 @@ const App = () => {
         <Route path='/homework' exact component={HomeWork}/>
         <Route path='/selection' exact component={Selection}/>
         <Route path='/addCourses' exact component={AddCourses}/>
+        <Route path='/SingleCourses' exact component={SingleCourses}/>
       </Switch>
     </>
   )

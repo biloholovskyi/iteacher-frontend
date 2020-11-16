@@ -1,8 +1,8 @@
 import React, {Component} from "react";
-import Common from "./CommonTabs";
+import CommonTabs from "./CommonTabs";
 import MyTemplates from "./MyTabs";
 
-import {TabsHead, TabsHeadNav} from "./addCoursesStyle";
+import {TabsHead, TabsHeadNav, TabsBody} from "./addCoursesStyle";
 
 class CourseTabs extends Component {
   constructor(props) {
@@ -24,13 +24,15 @@ class CourseTabs extends Component {
       <>
         <TabsHead>
           <TabsHeadNav className='tabs-active' onClick={(e) => this.changeTab(e, 'common')}>Общее шаблоны</TabsHeadNav>
-          <TabsHeadNav onClick={(e) => this.changeTab(e, 'tech')}>Мои шаблоны</TabsHeadNav>
+          <TabsHeadNav onClick={(e) => this.changeTab(e, 'myTemplates')}>Мои шаблоны</TabsHeadNav>
         </TabsHead>
-        {
-          this.state.tabStatus === 'common'
-            ? <Common/>
-            : <MyTemplates />
-        }
+        <TabsBody>
+          {
+            this.state.tabStatus === 'common'
+              ? <CommonTabs/>
+              : <MyTemplates />
+          }
+        </TabsBody>
       </>
     )
   }
