@@ -17,11 +17,6 @@ const Title = styled.h2`
     color: #000000;
 `
 const AddCourse = styled.button`
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 20px;
-  color: #FFFFFF;
   background: #4F7FFF;
   box-shadow: 0px 0px 1px rgba(105, 112, 119, 0.12), 0px 1px 2px rgba(105, 112, 119, 0.2);
   border-radius: 6px;
@@ -39,6 +34,15 @@ const AddCourse = styled.button`
       object-fit: contain;
       object-position: center;
       margin-right: 8px;
+  }
+  a {
+    font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: #FFFFFF;
+  text-decoration: none;
+  background-color: transparent;
   }
 `
 const SearchBlock = styled.div`
@@ -128,6 +132,7 @@ const SortBlock = styled.div`
         line-height: 22px;
         color: #697077;
         margin-right: 8px;
+        cursor: pointer;
       }
       & p:nth-child(3) {
         font-style: normal;
@@ -135,6 +140,7 @@ const SortBlock = styled.div`
         font-size: 16px;
         line-height: 22px;
         color: #111111;
+        cursor: pointer;
       }
 `
 const CoursesList = styled.div`
@@ -154,6 +160,7 @@ const CoursesItem = styled.div`
     margin-bottom: 8px;
     padding: 19px 24px;
      background-color: #fff;
+     cursor: pointer;
     .left {
     background-color: #fff;
       flex:1;
