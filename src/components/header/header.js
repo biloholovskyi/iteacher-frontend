@@ -4,6 +4,7 @@ import styled from "styled-components";
 // images/icon
 import bell from '../../assets/media/icon/content.png';
 import ava from '../../assets/media/icon/avatar.png';
+import { Link } from "react-router-dom";
 
 const HeaderWrap = styled.header`
   display: flex;
@@ -41,6 +42,22 @@ const NavLink = styled.a`
       margin-right: 0;
     }
 `
+const NavLinks = styled.nav`
+  a {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #111111;
+    letter-spacing: -0.01em;
+    margin-right: 40px;
+    text-decoration: none;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+`;
 const AvatarBlock = styled.div`
   .bell {
     width: 24px;
@@ -61,13 +78,14 @@ const Header = () => {
   return (
     <HeaderWrap>
       <Logo>Logo</Logo>
-      <nav>
-        <NavLink>Расписание</NavLink>
+      <NavLinks>
+        <Link to="/schedule">Расписание</Link>
         <NavLink>Ученики</NavLink>
         <NavLink>Домашние задания</NavLink>
-        <NavLink>Курсы</NavLink>
+        {/* <NavLink>Курсы</NavLink> */}
+        <Link to="/courses">Курсы</Link>
         <NavLink>Полезное</NavLink>
-      </nav>
+      </NavLinks>
       <AvatarBlock>
         <img className="bell" src={bell} alt="img"/>
         <img className="ava" src={ava} alt="img"/>

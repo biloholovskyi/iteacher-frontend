@@ -6,13 +6,24 @@
   outline: none;
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
-  background-color: #F8F9FB;
+  /* background-color: #F8F9FB; */
   /*-webkit-font-smoothing: antialiased;*/
 }
-
+:root {
+  --mainBlue: #4F7FFF;
+  --mainWhite: #fff;
+  --mainBlack: #000;
+  --mainGrey60: #697077;
+  --mainGrey20: #DDE1E6;
+  --mainRed: #DA1E28;
+  --mainGreen: #24A148;
+}
 .container {
   max-width: 1344px;
   width: 100%;
   margin: 0 auto;
   padding: 0 48px;
+}
+#root {
+  position: relative;
 }
