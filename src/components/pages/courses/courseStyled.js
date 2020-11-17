@@ -187,10 +187,10 @@ const CoursesItem = styled.div`
       align-items: center;
       justify-content: space-between;
       .right__name {
-        display: flex;
-      align-items: center;
-       background-color: #fff;
-      justify-content: center;
+          display: flex;
+          align-items: center;
+           background-color: #fff;
+          justify-content: center;
       
         img {
           width: 40px;
@@ -207,6 +207,17 @@ const CoursesItem = styled.div`
            background-color: #fff;
         }
       }
+      .names {
+      position: relative;
+    left: 15px;
+          h3, .all {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 22px;
+            color: #697077;
+          }
+        }
       .more {
         background-color: #fff;
         border: none;
@@ -219,9 +230,51 @@ const CoursesItem = styled.div`
           object-position: center;
         }
       }
+      .images {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+         background-color: #fff;
+         position: relative;
+           img {
+          width: 40px;
+          height: 40px;
+          object-fit: contain;
+          object-position: center;
+          margin-right: 16px;
+          border: 4px solid #fff;
+          border-radius: 50%;
+        }
+        & img:nth-child(2){
+          left: calc(100% - 40px/2 - 16px );
+            position: absolute;
+        }
+        
+        & img:nth-child(3) {
+          position: absolute;
+          left: calc(100% - 40px/2 - -4px );
+        }
+        .all {
+           width: 40px;
+           height: 40px;
+           border: 4px solid #fff;
+           border-radius: 50%;
+           background-color: #000;
+           position: absolute;
+            left: calc(100% - 40px/2 - -24px );
+            color: #fff;
+             display: flex;
+              align-items: center;
+              justify-content: center;
+              font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 22px;
+            cursor: pointer;
+        }
+      }
     }
 `
-
 export {
   DropDown,
   Input,

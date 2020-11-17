@@ -178,6 +178,10 @@ const ProgramSection = styled.div`
       color: #111111;
       margin-bottom: 16px;
   }
+  .programs {
+     margin-bottom: 50px;
+  }
+  
   button {
         width: 100%;
     background-color: #4F7FFF;
@@ -194,5 +198,53 @@ const ProgramSection = styled.div`
     margin-bottom: 48px;
   }
 `
+const WithOutHeaderContainer = styled.div`
+  position: relative;
+  z-index: 10;
+  .close {
+    position: absolute;
+    right: 48px;
+    top: 48px;
+    width: 56px;
+    height: 56px;
+    background-color: #DDE1E6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    img {
+      background-color: transparent;
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+    }
+  }
+`
+const ProgramItemWrap = styled.div`
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+    margin-bottom: 18px;
+   .circle {
+    border: 2px solid #DDE1E6;
+    width: 20px;
+    height: 20px;
+    border-radius: 1000px;
+    margin-right: 18px;
+    position: relative;
+    &:after {
+      content: '';
+      width: 2px;
+      height: 20px;
+      background-color: #DDE1E6;
+      bottom: -21px;
+      left: 50%;
+      transform: translateX(-50%);
+      position: absolute;
+      display: ${props => props.last ? 'none' : 'block'};
+    }
+   }
+`
 
-export {ProgramSection, SingleCoursesWrap, Banner, InfoBlock, DescSection}
+export {ProgramItemWrap,ProgramSection, SingleCoursesWrap, Banner, InfoBlock, DescSection,WithOutHeaderContainer}

@@ -4,7 +4,7 @@ const AddCoursesWrap = styled.div`
   width: 100%;
   max-width: 888px;
   margin: 0 auto;
-  padding-top: 100px;
+  padding-top: 58px;
 `
 const TitleSection = styled.div`
   display: flex;

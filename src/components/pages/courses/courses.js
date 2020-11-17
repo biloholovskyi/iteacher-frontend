@@ -1,5 +1,6 @@
 import React from 'react';
 import {CoursesItems} from './CoursesItem';
+import {CoursesItemsV2} from './CoursesItemV2';
 import { Link } from "react-router-dom";
 // style
 import {
@@ -53,7 +54,7 @@ const Courses = () => {
         <CoursesList>
           <CoursesItems/>
           <CoursesItems/>
-          <CoursesItems/>
+          <CoursesItemsV2/>
         </CoursesList>
       </div>
     </CourseWrap>
