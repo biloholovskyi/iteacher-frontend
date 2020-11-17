@@ -5,7 +5,7 @@ const CourseWrap = styled.div`
 `
 const Caption = styled.div`
   display: flex;
-  align-items: 'center;
+  align-items: center;
   justify-content: space-between;
   margin-bottom: 24px;
 `
@@ -43,7 +43,7 @@ const AddCourse = styled.button`
 `
 const SearchBlock = styled.div`
    display: flex;
-  align-items: 'center;
+  align-items: center;
   justify-content: center;
 `
 const Input = styled.div`

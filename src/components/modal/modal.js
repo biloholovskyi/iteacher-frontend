@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect  } from 'react-redux';
 
 import { ModalContainer, Title, TitleSpan, MiniTitleH4, Icon } from './modalStyle';
 import { Button } from '../info/info-style';
@@ -7,12 +8,13 @@ import img1 from '../../assets/img/111.png';
 import img2 from '../../assets/img/222.jpg';
 import img3 from '../../assets/img/333.jpg';
 
-const Modal = ({ active, homeWork, hendleHomeWork, doneCount }) => {
+const Modal = ({lessons, active, homeWork, hendleHomeWork, doneCount }) => {
+  const total = lessons.length
   return (
     <ModalContainer activeModal={active}>
       <div className="modal_top">
         <Title>Restaurants</Title>
-        <TitleSpan>Курс “Подготовка к ЕГЭ” (2/18)</TitleSpan>
+        <TitleSpan>Курс “Подготовка к ЕГЭ” (2/{total})</TitleSpan>
       </div>
       <div className="modal_description">
         <MiniTitleH4>Описание</MiniTitleH4>
@@ -52,5 +54,9 @@ const Modal = ({ active, homeWork, hendleHomeWork, doneCount }) => {
     </ModalContainer>
   );
 };
-
-export default Modal;
+const mapStateToProps = ({ lessons }) => {
+  return {
+    lessons
+  }
+} 
+export default connect(mapStateToProps)(Modal);

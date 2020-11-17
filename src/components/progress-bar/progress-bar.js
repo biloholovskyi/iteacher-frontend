@@ -1,36 +1,37 @@
 import React from "react";
 
-import "./progress-bar.css";
+import { ProgressBarContainer, Progress, Svg, Circle } from './progress-bar-style';
 
 const circumference = 2*Math.PI*80;
 const progress = (procent) => {
   const offset = circumference - procent/100 * circumference;
   return offset;
 };
-const procent = 5.5;// const procent = Math.round(1/18*100);
+const count = 9;
+const procent = Math.round(count/18*100);// const procent = Math.round(9/18*100);
 const ProgressBar = () => {
   return (
-    <div className="progress-bar-container">
-      <div className="progress_bar">
+    <ProgressBarContainer>
+      <Progress>
         <span className="procent">
           <span className="procent-title">Прогресс</span>
-          <span className="procent-num">1<i>/18</i></span>
+          <span className="procent-num">{count}<i>/18</i></span>
         </span>
-        <svg>
-          <circle className="circle" cx="80" cy="80" r="80"></circle>
-          <circle
+        <Svg>
+          <Circle cx="80" cy="80" r="80"></Circle>
+          <Circle
             style={{
               strokeDasharray: `${circumference} ${circumference}`,
               strokeDashoffset: `${progress(procent)}`,
             }}
-            className="circle2"
             cx="80"
             cy="80"
             r="80"
-          ></circle>
-        </svg>
-      </div>
-    </div>
+            second
+          ></Circle>
+        </Svg>
+      </Progress>
+    </ProgressBarContainer>
   );
 };
 
