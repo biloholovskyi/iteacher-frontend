@@ -1,9 +1,9 @@
-const lessonsLoaded = (newLessons) => {
+const hendleItemLesson = (idItem) => {
   return {
-    type: 'LESSONS_LOADED',
-    payload: newLessons
+    type: 'HENDLE_ITEM_LESSON',
+    payload: idItem
   }
 }
 export {
-  lessonsLoaded
+  hendleItemLesson
 }

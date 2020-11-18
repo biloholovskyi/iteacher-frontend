@@ -10,6 +10,7 @@ const HeaderWrap = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between; 
+  background-color: #fff;
   padding: 20px 48px;
   position: fixed;
   top: 0;
