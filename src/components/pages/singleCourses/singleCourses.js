@@ -82,7 +82,7 @@ export  default class  SingleCourses extends Component {
                 <ProgramItem />
                 <ProgramItem lastElement={this.state.lastProgram} />
               </div>
-              <button className='startBtn'>Начать курс</button>
+              <Link to='/courseEmpty' className='startBtn'>Начать курс</Link>
             </ProgramSection>
           </SingleCoursesWrap>
         </div>

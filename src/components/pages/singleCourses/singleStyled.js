@@ -182,8 +182,8 @@ const ProgramSection = styled.div`
      margin-bottom: 50px;
   }
   
-  button {
-        width: 100%;
+  .startBtn {
+     width: 100%;
     background-color: #4F7FFF;
     border: none;
     cursor: pointer;
@@ -196,6 +196,9 @@ const ProgramSection = styled.div`
     box-shadow: 0px 0px 1px rgba(105, 112, 119, 0.12), 0px 1px 2px rgba(105, 112, 119, 0.2);
     border-radius: 6px;
     margin-bottom: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 `
 const WithOutHeaderContainer = styled.div`
