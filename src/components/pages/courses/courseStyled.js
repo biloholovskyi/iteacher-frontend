@@ -17,11 +17,6 @@ const Title = styled.h2`
     color: #000000;
 `
 const AddCourse = styled.button`
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 20px;
-  color: #FFFFFF;
   background: #4F7FFF;
   box-shadow: 0px 0px 1px rgba(105, 112, 119, 0.12), 0px 1px 2px rgba(105, 112, 119, 0.2);
   border-radius: 6px;
@@ -39,6 +34,15 @@ const AddCourse = styled.button`
       object-fit: contain;
       object-position: center;
       margin-right: 8px;
+  }
+  a {
+    font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: #FFFFFF;
+  text-decoration: none;
+  background-color: transparent;
   }
 `
 const SearchBlock = styled.div`
@@ -128,6 +132,7 @@ const SortBlock = styled.div`
         line-height: 22px;
         color: #697077;
         margin-right: 8px;
+        cursor: pointer;
       }
       & p:nth-child(3) {
         font-style: normal;
@@ -135,6 +140,7 @@ const SortBlock = styled.div`
         font-size: 16px;
         line-height: 22px;
         color: #111111;
+        cursor: pointer;
       }
 `
 const CoursesList = styled.div`
@@ -154,6 +160,7 @@ const CoursesItem = styled.div`
     margin-bottom: 8px;
     padding: 19px 24px;
      background-color: #fff;
+     cursor: pointer;
     .left {
     background-color: #fff;
       flex:1;
@@ -180,10 +187,10 @@ const CoursesItem = styled.div`
       align-items: center;
       justify-content: space-between;
       .right__name {
-        display: flex;
-      align-items: center;
-       background-color: #fff;
-      justify-content: center;
+          display: flex;
+          align-items: center;
+           background-color: #fff;
+          justify-content: center;
       
         img {
           width: 40px;
@@ -200,6 +207,17 @@ const CoursesItem = styled.div`
            background-color: #fff;
         }
       }
+      .names {
+      position: relative;
+    left: 15px;
+          h3, .all {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 22px;
+            color: #697077;
+          }
+        }
       .more {
         background-color: #fff;
         border: none;
@@ -212,9 +230,51 @@ const CoursesItem = styled.div`
           object-position: center;
         }
       }
+      .images {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+         background-color: #fff;
+         position: relative;
+           img {
+          width: 40px;
+          height: 40px;
+          object-fit: contain;
+          object-position: center;
+          margin-right: 16px;
+          border: 4px solid #fff;
+          border-radius: 50%;
+        }
+        & img:nth-child(2){
+          left: calc(100% - 40px/2 - 16px );
+            position: absolute;
+        }
+        
+        & img:nth-child(3) {
+          position: absolute;
+          left: calc(100% - 40px/2 - -4px );
+        }
+        .all {
+           width: 40px;
+           height: 40px;
+           border: 4px solid #fff;
+           border-radius: 50%;
+           background-color: #000;
+           position: absolute;
+            left: calc(100% - 40px/2 - -24px );
+            color: #fff;
+             display: flex;
+              align-items: center;
+              justify-content: center;
+              font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 22px;
+            cursor: pointer;
+        }
+      }
     }
 `
-
 export {
   DropDown,
   Input,
