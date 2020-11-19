@@ -20,7 +20,7 @@ const ItemsLessons = ({ hendleItemLesson, activeItemLesson, active, lessons }) =
             key={item.id} 
             activeItem={item.active}
             onClick={()=>{
-              activeItemLesson()
+              // activeItemLesson()
               hendleItemLesson(item.id)
             }}
           >
@@ -52,9 +52,10 @@ const ItemsLessons = ({ hendleItemLesson, activeItemLesson, active, lessons }) =
     </ItemsLessonsContainer>
   );
 };
-const mapStateToProps = ({ lessons }) => {
+const mapStateToProps = ({ lessons, active }) => {
   return {
-    lessons
+    lessons,
+    active
   }
 }
 const mapDispatchToProps = (dispatch) => {

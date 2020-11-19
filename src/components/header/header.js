@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { connect  } from 'react-redux';
 
 // images/icon
 import bell from '../../assets/media/icon/content.png';
@@ -10,7 +11,7 @@ const HeaderWrap = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between; 
-  background-color: #fff;
+  background-color: ${props=>props.active ? "transparent" : "#fff"};
   padding: 20px 48px;
   position: fixed;
   top: 0;
@@ -75,14 +76,15 @@ const AvatarBlock = styled.div`
   }
 `
 
-const Header = () => {
+const Header = ({active}) => {
   return (
-    <HeaderWrap>
+    <HeaderWrap active={active}>
       <Logo>Logo</Logo>
       <NavLinks>
         <Link to="/schedule">Расписание</Link>
         <NavLink>Ученики</NavLink>
-        <NavLink>Домашние задания</NavLink>
+        {/* <NavLink>Домашние задания</NavLink> */}
+        <Link to="/homework">Домашние задания</Link>
         {/* <NavLink>Курсы</NavLink> */}
         <Link to="/courses">Курсы</Link>
         <NavLink>Полезное</NavLink>
@@ -94,5 +96,9 @@ const Header = () => {
     </HeaderWrap>
   )
 }
-
-export default Header;
+const mapStateToProps = ({ active }) => {
+  return {
+    active
+  }
+}
+export default connect(mapStateToProps)(Header);

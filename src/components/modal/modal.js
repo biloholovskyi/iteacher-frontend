@@ -60,10 +60,11 @@ const Modal = ({modal, lessons, active, hendleHomeWork }) => {
     </ModalContainer>
   );
 };
-const mapStateToProps = ({ modal, lessons }) => {
+const mapStateToProps = ({ modal, lessons, active }) => {
   return {
     modal,
-    lessons
+    lessons,
+    active
   }
 }
 const mapDispatchToProps = (dispatch) => {

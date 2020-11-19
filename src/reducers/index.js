@@ -403,13 +403,17 @@ const initialState = {
     homeWork: [],
     video: "",
     description: "",
-  }
+  },
+  active: false,
+  schedule: false,
+  HW: false
 }
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case 'HENDLE_ITEM_LESSON':
       const idLesson = action.payload;
+      const activeNew = !state.active;
       const lesson = state.lessons.find((item) => item.id === idLesson);
       const idx = state.lessons.findIndex((el) => el.id === idLesson);
       const oldItemLesson = state.lessons[idx];
@@ -428,7 +432,8 @@ const reducer = (state = initialState, action) => {
       }
       return {
         lessons: newArray,
-        modal: newItem
+        modal: newItem,
+        active: activeNew
       };
     case 'HENDLE_ITEM_HW':
       const idHW = action.payload;

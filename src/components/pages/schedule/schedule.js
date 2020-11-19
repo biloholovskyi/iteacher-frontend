@@ -1,30 +1,26 @@
 import React from 'react';
+import { connect  } from 'react-redux';
 
 import Info from '../../info';
 import ItemsLessons from '../../items-lessons';
 import Modal from '../../modal';
+import ScheduleEmpty from '../../schedule-empty';
 
 import styled from "styled-components";
 
 class Schedule extends React.Component {
-  state = {active: false};
-
-  activeItemLesson = () => {
-    this.setState({
-      active: !this.state.active
-    })
-  };
-
   render() {
+    const { schedule } = this.props;
     return (
-      <ScheduleContainer>
-        <Info />
-        <ItemsLessons active={this.state.active} activeItemLesson={this.activeItemLesson} />
-        <Modal active={this.state.active}/>
-      </ScheduleContainer>
+      schedule 
+      ? <ScheduleContainer>
+          <Info />
+          <ItemsLessons />
+          <Modal />
+        </ScheduleContainer>
+      : <ScheduleEmpty />
     );
   }
-  
 };
 const ScheduleContainer = styled.div`
   padding: 24px 48px;
@@ -35,4 +31,9 @@ const ScheduleContainer = styled.div`
   justify-content: space-between;
   background-color: #F8F9FB;
 `
-export default Schedule;
+const mapStateToProps = ({ schedule }) => {
+  return {
+    schedule
+  }
+}
+export default connect(mapStateToProps)(Schedule);
