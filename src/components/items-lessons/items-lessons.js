@@ -18,13 +18,12 @@ const ItemsLessons = ({ hendleItemLesson, activeItemLesson, active, lessons }) =
         return (
           <ItemLesson 
             key={item.id} 
-            activeItem={item.active} 
-            // onClick={()=>console.log(item.id)}// надо переделать!!!
+            activeItem={item.active}
             onClick={()=>{
               activeItemLesson()
               hendleItemLesson(item.id)
             }}
-            >
+          >
             <DateTime>
               <span className="date">
                 {item.date && format(new Date(item.date),'cccccc, d LLLL',{locale: ruLocale})}
@@ -49,10 +48,7 @@ const ItemsLessons = ({ hendleItemLesson, activeItemLesson, active, lessons }) =
           </ItemLesson>
         );
       })}
-      <div 
-        // onClick={hendleItemLesson} // временное решение
-        className={active ? "modalGrey":""}
-      ></div>
+      <div className={active ? "modalGrey":""}></div>
     </ItemsLessonsContainer>
   );
 };

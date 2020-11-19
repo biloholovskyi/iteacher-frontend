@@ -397,23 +397,13 @@ const initialState = {
       active: false
     },
   ],
-  modal: [
-    {
-      img: [
-        {src: "img/111.png"},
-        {src: "img/222.jpg"},
-        {src: "img/333.jpg"},
-      ],
-      homeWork: [
-        {id: 1, title: "Lorem ipsum dolor sit amet", active: false},
-        {id: 2, title: "Lorem ipsum dolor sit amet", active: false},
-        {id: 3, title: "Lorem ipsum dolor sit amet", active: false},
-        {id: 4, title: "Lorem ipsum dolor sit amet", active: false},
-      ],
-      video: "cannibalholocaust.mkv",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet orci purus. Vestibulum commodo vulputate dignissim. Quisque ante ipsum, tempus...",
-    },
-  ]
+  modal: {
+    id: null,
+    img: [],
+    homeWork: [],
+    video: "",
+    description: "",
+  }
 }
 
 const reducer = (state = initialState, action) => {
@@ -421,6 +411,14 @@ const reducer = (state = initialState, action) => {
     case 'HENDLE_ITEM_LESSON':
       const idLesson = action.payload;
       const lesson = state.lessons.find((item) => item.id === idLesson);
+      const idx = state.lessons.findIndex((el) => el.id === idLesson);
+      const oldItemLesson = state.lessons[idx];
+      const newItemLesson = { ...oldItemLesson, active: !oldItemLesson.active };
+      const newArray = [ 
+        ...state.lessons.slice(0, idx),
+        newItemLesson,
+        ...state.lessons.slice(idx + 1)
+      ];
       const newItem = {
         id: lesson.id,
         video: lesson.video,
@@ -428,10 +426,27 @@ const reducer = (state = initialState, action) => {
         description: lesson.description,
         img: lesson.img
       }
-    return {
-      ...state,
-      modal: [newItem]
-    };
+      return {
+        lessons: newArray,
+        modal: newItem
+      };
+    case 'HENDLE_ITEM_HW':
+      const idHW = action.payload;
+      const idxHW = state.modal.homeWork.findIndex((el) => el.id === idHW);
+      const oldItemHW = state.modal.homeWork[idxHW];
+      const newItemHW = { ...oldItemHW, active: !oldItemHW.active };
+      const newArrayHW = [ 
+        ...state.modal.homeWork.slice(0, idxHW),
+        newItemHW,
+        ...state.modal.homeWork.slice(idxHW + 1)
+      ];
+      return {
+        ...state,
+        modal: {
+          ...state.modal,
+          homeWork: newArrayHW
+        }
+      }
     default:
       return state;
   }

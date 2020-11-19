@@ -16,14 +16,10 @@ class Schedule extends React.Component {
   };
 
   render() {
-    // const doneCount = this.state.homeWork.filter((el) => el.active).length; нужен еще!!!!!!!!!
     return (
       <ScheduleContainer>
         <Info />
-        <ItemsLessons 
-          active={this.state.active} 
-          activeItemLesson={this.activeItemLesson}
-        />
+        <ItemsLessons active={this.state.active} activeItemLesson={this.activeItemLesson} />
         <Modal active={this.state.active}/>
       </ScheduleContainer>
     );

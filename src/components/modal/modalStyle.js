@@ -8,14 +8,14 @@ import styled from "styled-components";
   -moz-transition: 0.5s;
   -ms-transition: 0.5s;
   -o-transition: 0.5s;
-  width: 350px;
+  width: 365px;
   height: 100%;
-  left: ${props => props.activeModal ? 0 : "-350px;"};
+  left: ${props => props.activeModal ? 0 : "-365px;"};
   background-color: var(--mainWhite);
   padding: 24px;
   box-sizing: border-box;
   z-index: 10;
-  ${props=>props.activeModal ? "box-shadow: 19px 0px 38px 0px rgba(105, 112, 119, 0.16)" : null}
+  ${props=>props.activeModal ? "box-shadow: 19px 0px 38px 0px rgba(105, 112, 119, 0.16);" : null}
   .modal_top {
     border-bottom: 1px solid var(--mainGrey20);
     padding-bottom: 24px;
