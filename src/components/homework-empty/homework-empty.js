@@ -24,12 +24,11 @@ const HomeworkEmptyContainer = styled.div`
   background-color: #F8F9FB;
 `
 const Homework = styled.div`
-  width: 360px;
-  height: 360px;
   .border {
     border-radius: 16px;
-    width: 100%;
-    height: 100%;
+    width: 360px;
+    height: 360px;
+    margin: 0 auto;
     border: 2px dashed var(--mainGrey20);
   }
   .title {

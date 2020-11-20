@@ -18,14 +18,19 @@ const ItemLesson = styled.div`
   ${props=>props.activeItem ? "position: sticky;" : null}
   .item-lesson_hwfalse {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    justify-self: right;
     align-items: center;
     font-size: 14px;
     color: var(--mainRed);
     font-weight: 400;
     background: rgba(218, 30, 40, 0.1);
     border-radius: 6px;
-    padding: 10px 17px;
+    padding: 10px;
+    max-width: 300px;
+    svg {
+      margin-right: 14px;
+    }
   }
 `
 const DateTime = styled.span`
@@ -44,16 +49,8 @@ const Title = styled.span`
   font-weight: 400;
   color: var(--mainBlack);
 `
-const Count = styled.span`
-  display: flex;
-  align-items: center;
-  font-size: 14px;
-  color: var(--mainGrey60);
-  font-weight: 400;
-`
 export {
   ItemLesson,
   DateTime,
   Title,
-  Count
 }

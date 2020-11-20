@@ -3,7 +3,7 @@ import { connect  } from 'react-redux';
 
 import { hendleHomeWork } from '../../action';
 
-import { ModalContainer, Title, TitleSpan, MiniTitleH4, Icon } from './modalStyle';
+import { ModalContainer, Dots, Title, TitleSpan, MiniTitleH4, Icon } from './modalStyle';
 import { Button } from '../info/info-style';
 
 const Modal = ({modal, lessons, active, hendleHomeWork }) => {
@@ -11,10 +11,17 @@ const Modal = ({modal, lessons, active, hendleHomeWork }) => {
   const totalHw = modal.homeWork.length;
   const doneCount = modal.homeWork.filter((el) => el.active).length;
   return (
+    <>
     <ModalContainer activeModal={active}>
+      {/* <ModalTop>
+        <Title>Restaurants</Title>
+        <TitleSpan>Курс “Подготовка к ЕГЭ” ({modal.id}/{total})</TitleSpan>
+        <Dots><span></span><span></span><span></span></Dots>
+      </ModalTop> */}
       <div className="modal_top">
         <Title>Restaurants</Title>
         <TitleSpan>Курс “Подготовка к ЕГЭ” ({modal.id}/{total})</TitleSpan>
+        <Dots><span></span><span></span><span></span></Dots>
       </div>
       <div className="modal_description">
         <MiniTitleH4>Описание</MiniTitleH4>
@@ -54,10 +61,11 @@ const Modal = ({modal, lessons, active, hendleHomeWork }) => {
           </div>
         })}
       </div>
-      <Button style={{marginTop: "24px"}}>
+      <Button style={{margin: "0 24px 24px"}}>
         <span>Продолжить выполнение</span>
       </Button>
     </ModalContainer>
+    </>
   );
 };
 const mapStateToProps = ({ modal, lessons, active }) => {

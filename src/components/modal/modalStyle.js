@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
- const ModalContainer = styled.div`
+const ModalContainer = styled.div`
   position: absolute;
   top: 0;
   transition: 0.5s;
@@ -12,19 +12,25 @@ import styled from "styled-components";
   height: 100%;
   left: ${props => props.activeModal ? 0 : "-365px;"};
   background-color: var(--mainWhite);
-  padding: 24px;
+  /* padding: 24px; */
   box-sizing: border-box;
   z-index: 10;
   ${props=>props.activeModal ? "box-shadow: 19px 0px 38px 0px rgba(105, 112, 119, 0.16);" : null}
   .modal_top {
     border-bottom: 1px solid var(--mainGrey20);
-    padding-bottom: 24px;
+    /* padding-bottom: 24px; */
+    position: relative;
+    padding: 24px;
   }
-  .modal_description a {
-    display: block;
-    margin-top: 10px;
+  .modal_description {
+    padding: 0 24px;
+    a {
+      display: block;
+      margin-top: 10px;
+    }
   }
   .modal_material {
+    padding: 0 24px;
     &-video {
       border: 1px solid var(--mainGrey20);
       box-sizing: border-box;
@@ -48,12 +54,16 @@ import styled from "styled-components";
     }
 
   }
-  .homework_item {
-    display: flex;
-    align-items: center;
-    padding-top: 18px;
-    cursor: pointer;
+  .modal_homework {
+    padding: 24px;
+      .homework_item {
+      display: flex;
+      align-items: center;
+      padding-top: 18px;
+      cursor: pointer;
+    } 
   }
+  
 `
 const Title = styled.h2`
   font-weight: 600;
@@ -65,6 +75,20 @@ const TitleSpan = styled.span`
   font-weight: 400;
   font-size: 14px;
   color: var(--mainGrey60);
+`
+const Dots = styled.div`
+  cursor: pointer;
+  position: absolute;
+  right: 25px;
+  top: 30px;
+  span {
+    display: block;
+    border-radius: 50%;
+    margin: 1px 5px;
+    width: 4px;
+    height: 4px;
+    background-color: var(--mainGrey60);
+  }
 `
 const MiniTitleH4 = styled.h4`
   font-weight: 600;
@@ -99,6 +123,7 @@ const Icon = styled.span`
 `
 export {
   ModalContainer,
+  Dots,
   Title,
   TitleSpan,
   MiniTitleH4,

@@ -1,4 +1,5 @@
 import React from "react";
+import { connect  } from 'react-redux';
 
 import { ProgressBarContainer, Progress, Svg, Circle } from './progress-bar-style';
 
@@ -7,9 +8,14 @@ const progress = (procent) => {
   const offset = circumference - procent/100 * circumference;
   return offset;
 };
-const count = 9;
-const procent = Math.round(count/18*100);// const procent = Math.round(9/18*100);
-const ProgressBar = () => {
+
+
+const ProgressBar = ({lessons}) => {
+
+  const total = lessons.length
+  const count = 9;
+  const procent = Math.round(count/total*100);// const procent = Math.round(9/18*100);
+
   return (
     <ProgressBarContainer>
       <Progress>
@@ -34,5 +40,9 @@ const ProgressBar = () => {
     </ProgressBarContainer>
   );
 };
-
-export default ProgressBar;
+const mapStateToProps = ({ lessons }) => {
+  return {
+    lessons
+  }
+}
+export default connect(mapStateToProps)(ProgressBar);

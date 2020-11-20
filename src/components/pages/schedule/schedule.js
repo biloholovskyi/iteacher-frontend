@@ -12,7 +12,7 @@ class Schedule extends React.Component {
   render() {
     const { schedule } = this.props;
     return (
-      schedule 
+      schedule // флаг для просмотра пустой страницы расписания
       ? <ScheduleContainer>
           <Info />
           <ItemsLessons />

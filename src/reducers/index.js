@@ -1,13 +1,12 @@
 const initialState = {
-  lessons: [
+  lessons: [ // список уроков (активных)
     {
-      id: 1,
-      date: "Nov 19 2020 09:00",
-      time: "9:00-10:00",
-      title: "Hobbies",
-      count: "Начнется через 8:32:47",
-      hw: false,
-      active: false,
+      id: 1, // н/п
+      date: "Nov 19 2020 09:00", //дата проведения, так же до этого времени идет отсчет с настоящего времени
+      time: "9:00-10:00", // время проведения
+      title: "Hobbies", // названия
+      hw: false, // флаг об отрисовки выполнения дом задания
+      active: false, // флаг кокой выбран урок по списку
       video: "cannibalholocaust.mkv",
       img: [
         {src: "img/111.png"},
@@ -28,7 +27,6 @@ const initialState = {
       date: "Nov 20 2020 10:00",
       time: "9:00-10:00",
       title: "Time",
-      count: "",
       img: [
         {src: "img/111.png"},
         {src: "img/222.jpg"},
@@ -50,7 +48,6 @@ const initialState = {
       date: "Nov 21 2020 09:00",
       time: "9:00-10:00",
       title: "Sleep",
-      count: "",
       img: [
         {src: "img/111.png"},
         {src: "img/222.jpg"},
@@ -72,7 +69,6 @@ const initialState = {
       date: "Nov 22 2020 09:00",
       time: "9:00-10:00",
       title: "Music",
-      count: "",
       img: [
         {src: "img/111.png"},
         {src: "img/222.jpg"},
@@ -94,7 +90,6 @@ const initialState = {
       date: "Nov 22 2020 09:00",
       time: "9:00-10:00",
       title: "First Dates",
-      count: "",
       img: [
         {src: "img/111.png"},
         {src: "img/222.jpg"},
@@ -116,7 +111,6 @@ const initialState = {
       date: "Nov 23 2020 09:00",
       time: "9:00-10:00",
       title: "Work",
-      count: "",
       img: [
         {src: "img/111.png"},
         {src: "img/222.jpg"},
@@ -138,7 +132,6 @@ const initialState = {
       date: "Nov 24 2020 09:00",
       time: "9:00-10:00",
       title: "Risk",
-      count: "",
       img: [
         {src: "img/111.png"},
         {src: "img/222.jpg"},
@@ -160,7 +153,6 @@ const initialState = {
       date: "Nov 25 2020 09:00",
       time: "9:00-10:00",
       title: "Food",
-      count: "",
       img: [
         {src: "img/111.png"},
         {src: "img/222.jpg"},
@@ -182,7 +174,6 @@ const initialState = {
       date: "Nov 26 2020 09:00",
       time: "9:00-10:00",
       title: "Work",
-      count: "",
       img: [
         {src: "img/111.png"},
         {src: "img/222.jpg"},
@@ -204,7 +195,6 @@ const initialState = {
       date: "Nov 27 2020 09:00",
       time: "9:00-10:00",
       title: "Risk",
-      count: "",
       img: [
         {src: "img/111.png"},
         {src: "img/222.jpg"},
@@ -226,7 +216,6 @@ const initialState = {
       date: "Nov 28 2020 09:00",
       time: "9:00-10:00",
       title: "Food",
-      count: "",
       img: [
         {src: "img/111.png"},
         {src: "img/222.jpg"},
@@ -248,7 +237,6 @@ const initialState = {
       date: "Nov 29 2020 09:00",
       time: "9:00-10:00",
       title: "Food",
-      count: "",
       img: [
         {src: "img/111.png"},
         {src: "img/222.jpg"},
@@ -270,7 +258,6 @@ const initialState = {
       date: "Nov 30 2020 09:00",
       time: "9:00-10:00",
       title: "Food",
-      count: "",
       img: [
         {src: "img/111.png"},
         {src: "img/222.jpg"},
@@ -292,7 +279,6 @@ const initialState = {
       date: "Dec 01 2020 09:00",
       time: "9:00-10:00",
       title: "Food",
-      count: "",
       img: [
         {src: "img/111.png"},
         {src: "img/222.jpg"},
@@ -314,7 +300,6 @@ const initialState = {
       date: "Dec 02 2020 09:00",
       time: "9:00-10:00",
       title: "Food",
-      count: "",
       img: [
         {src: "img/111.png"},
         {src: "img/222.jpg"},
@@ -336,7 +321,6 @@ const initialState = {
       date: "Dec 03 2020 09:00",
       time: "9:00-10:00",
       title: "Food",
-      count: "",
       img: [
         {src: "img/111.png"},
         {src: "img/222.jpg"},
@@ -358,7 +342,6 @@ const initialState = {
       date: "Dec 03 2020 09:00",
       time: "9:00-10:00",
       title: "Food",
-      count: "",
       img: [
         {src: "img/111.png"},
         {src: "img/222.jpg"},
@@ -380,7 +363,6 @@ const initialState = {
       date: "Dec 04 2020 09:00",
       time: "9:00-10:00",
       title: "Food",
-      count: "",
       img: [
         {src: "img/111.png"},
         {src: "img/222.jpg"},
@@ -397,16 +379,16 @@ const initialState = {
       active: false
     },
   ],
-  modal: {
-    id: null,
+  modal: { // модальное окно
+    id: null, // какое из уроков по номеру открыт ну и соответственно его картинки, кол-во домашек, видео и описание
     img: [],
     homeWork: [],
     video: "",
     description: "",
   },
-  active: false,
-  schedule: false,
-  HW: false
+  active: false, // флаг открыт или нет модальное окно?
+  schedule: true, // флаг есть ли расписание или нет?
+  HW: false // флаг есть ли домашняя работа?
 }
 
 const reducer = (state = initialState, action) => {
@@ -431,6 +413,7 @@ const reducer = (state = initialState, action) => {
         img: lesson.img
       }
       return {
+        ...state,
         lessons: newArray,
         modal: newItem,
         active: activeNew
