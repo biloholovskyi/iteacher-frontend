@@ -8,6 +8,7 @@ const TemplateItem = () => {
     <TemplateItemWrap>
       <Link to='/SingleCourses'>
         <BgWrap>
+          <div className="firstLeter">N</div>
           <h3>Course name</h3>
         </BgWrap>
         <h4 className='title'>Course name</h4>

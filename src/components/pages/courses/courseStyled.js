@@ -5,7 +5,7 @@ const CourseWrap = styled.div`
 `
 const Caption = styled.div`
   display: flex;
-  align-items: 'center;
+  align-items: center;
   justify-content: space-between;
   margin-bottom: 24px;
 `
@@ -47,11 +47,11 @@ const AddCourse = styled.button`
 `
 const SearchBlock = styled.div`
    display: flex;
-    align-items: 'center;
+    align-items: center;
     justify-content: center;
 `
 const Input = styled.div`
-  display: flex;
+      display: flex;
       align-items: center;
       justify-content: center;
       position: relative;
@@ -181,8 +181,8 @@ const CoursesItem = styled.div`
       }
     }
     .right {
-    background-color: #fff;
-    flex: 1;
+      background-color: #fff;
+      flex: 1;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -205,6 +205,7 @@ const CoursesItem = styled.div`
           font-size: 14px;
           line-height: 22px;
            background-color: #fff;
+           color: #697077;
         }
       }
       .names {

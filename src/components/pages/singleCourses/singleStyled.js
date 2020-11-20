@@ -69,6 +69,19 @@ const Banner = styled.div`
       letter-spacing: -0.01em;
       color: #FFFFFF;
     }
+    .firstLeter {
+        font-style: normal;
+        font-weight: 800;
+        font-size: 440px;
+        line-height: 100%;
+        background-color: transparent;
+        letter-spacing: -0.01em;
+        color: rgba(255,255,255,.1);
+        position: absolute;
+        bottom: -60px;
+        left: -24px;
+      }
+    }
 `
 const InfoBlock = styled.div`
   display: flex;
@@ -179,11 +192,11 @@ const ProgramSection = styled.div`
       margin-bottom: 16px;
   }
   .programs {
-     margin-bottom: 50px;
+     margin-bottom: 150px;
   }
   
-  button {
-        width: 100%;
+  .startBtn {
+     width: 100%;
     background-color: #4F7FFF;
     border: none;
     cursor: pointer;
@@ -196,6 +209,14 @@ const ProgramSection = styled.div`
     box-shadow: 0px 0px 1px rgba(105, 112, 119, 0.12), 0px 1px 2px rgba(105, 112, 119, 0.2);
     border-radius: 6px;
     margin-bottom: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    max-width: 888px;
+    transform: translateX(-50%);
   }
 `
 const WithOutHeaderContainer = styled.div`

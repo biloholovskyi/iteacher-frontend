@@ -9,7 +9,10 @@ import HomeWork from "../pages/homeWork/homeWork";
 import Selection from "../pages/selection/selection";
 import AddCourses from "../pages/addCourses/addCourses";
 import SingleCourses from "../pages/singleCourses/singleCourses";
-
+import CourseEmpty from "../pages/courseEmpty/courseEmpty";
+import SignIn from "../pages/signIn/signIn";
+import NoneCourse from '../pages/noneCourses/noneCourses';
+// general style
 import './app.css';
 
 const App = () => {
@@ -25,6 +28,9 @@ const App = () => {
         <Route path='/selection' exact component={Selection}/>
         <Route path='/addCourses' exact component={AddCourses}/>
         <Route path='/SingleCourses' exact component={SingleCourses}/>
+        <Route path='/courseEmpty' exact component={CourseEmpty}/>
+        <Route path='/SignIn' exact component={SignIn}/>
+        <Route path='/NoneCourse' exact component={NoneCourse}/>
       </Switch>
     </>
   )

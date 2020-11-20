@@ -43,6 +43,9 @@ const NavList = styled.nav`
     }
 `
 const AvatarBlock = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
   .bell {
     width: 24px;
     height: 24px;

@@ -19,7 +19,7 @@ const Header = () => {
         <Link to='/students'>Ученики</Link>
         <Link to='/homework'>Домашние задания</Link>
         <Link to='/courses' >Курсы</Link>
-        <Link to='/selection'>Полезное</Link>
+        <Link to='/NoneCourse'>Полезное</Link>
       </NavList>
       <AvatarBlock>
         <img className="bell" src={bell} alt="img"/>
