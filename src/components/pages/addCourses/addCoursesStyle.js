@@ -77,6 +77,18 @@ const BgWrap = styled.div`
       color: #fff;
       background-color: transparent;
     }
+    .firstLeter {
+        font-style: normal;
+        font-weight: 800;
+        font-size: 220px;
+        line-height: 100%;
+        background: transparent;
+        position: absolute;
+        bottom: -38px;
+        left: -7px;
+        letter-spacing: -0.01em;
+        color: rgba(255,255,255,.1);
+    }
 `
 const TemplateItemWrap = styled.div`
   width: 100%;

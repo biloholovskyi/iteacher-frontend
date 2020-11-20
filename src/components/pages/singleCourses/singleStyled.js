@@ -69,6 +69,19 @@ const Banner = styled.div`
       letter-spacing: -0.01em;
       color: #FFFFFF;
     }
+    .firstLeter {
+        font-style: normal;
+        font-weight: 800;
+        font-size: 440px;
+        line-height: 100%;
+        background-color: transparent;
+        letter-spacing: -0.01em;
+        color: rgba(255,255,255,.1);
+        position: absolute;
+        bottom: -60px;
+        left: -24px;
+      }
+    }
 `
 const InfoBlock = styled.div`
   display: flex;
@@ -179,7 +192,7 @@ const ProgramSection = styled.div`
       margin-bottom: 16px;
   }
   .programs {
-     margin-bottom: 50px;
+     margin-bottom: 150px;
   }
   
   .startBtn {
@@ -199,6 +212,11 @@ const ProgramSection = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    max-width: 888px;
+    transform: translateX(-50%);
   }
 `
 const WithOutHeaderContainer = styled.div`

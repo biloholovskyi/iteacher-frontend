@@ -29,6 +29,7 @@ export  default class  SingleCourses extends Component {
             <div className='title'>Course name</div>
             <div className='desc'>Course topic</div>
             <Banner>
+              <div className="firstLeter">N</div>
               <h2>Course name</h2>
             </Banner>
             <InfoBlock>
