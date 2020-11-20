@@ -11,10 +11,23 @@ export  default class  SingleCourses extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      lastProgram: true
+      lastProgram: true,
+      showMore: false
     }
   }
+
+//  btn read more
+  showMore = () => {
+    this.setState(() => {
+      return {
+        ...this.state,
+        showMore: true
+      }
+    })
+  }
+
   render(){
+  const {showMore} = this.state;
     return (
       <WithOutHeaderContainer>
           <Link to='/addCourses' className='close'>
@@ -70,9 +83,13 @@ export  default class  SingleCourses extends Component {
                 <div className="bottom">Сложность</div>
               </div>
             </InfoBlock>
-            <DescSection>
+            <DescSection show={showMore}>
               <h3>Описание</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet orci purus. Vestibulum commodo vulputate dignissim. Quisque ante ipsum, tempus eu tempus in, vulputate sit amet arcu. Vestibulum egestas nisl felis, vel convallis quam suscipit eu. Curabitur metus est, vehicula eget pulvinar a, aliquet nec odio. Aliquam eget tort... <a>Читать полностью</a></p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet orci purus. Vestibulum commodo vulputate dignissim. Quisque ante ipsum, tempus eu tempus in, vulputate sit amet arcu. Vestibulum egestas nisl felis, vel convallis quam suscipit eu. Curabitur metus est, vehicula eget pulvinar a, aliquet nec odio. Aliquam eget tort...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet orci purus. Vestibulum commodo vulputate dignissim. Quisque ante ipsum, tempus eu tempus in, vulputate sit amet arcu. </p><button  onClick={()=> this.showMore()} >Читать полностью</button>
+              <p className={'hiddenText'}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet orci purus. Vestibulum commodo vulputate dignissim. Quisque ante ipsum, tempus eu tempus in, vulputate sit amet arcu. Vestibulum egestas nisl felis, vel convallis quam suscipit eu. Curabitur metus est, vehicula eget pulvinar a, aliquet nec odio. Aliquam eget tort...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet orci purus. Vestibulum commodo vulputate dignissim. Quisque ante ipsum, tempus eu tempus in, vulputate sit amet arcu. </p>
+              <p className={'hiddenText'}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet orci purus. Vestibulum commodo vulputate dignissim. Quisque ante ipsum, tempus eu tempus in, vulputate sit amet arcu. Vestibulum egestas nisl felis, vel convallis quam suscipit eu. Curabitur metus est, vehicula eget pulvinar a, aliquet nec odio. Aliquam eget tort...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet orci purus. Vestibulum commodo vulputate dignissim. Quisque ante ipsum, tempus eu tempus in, vulputate sit amet arcu. </p>
+              <p className={'hiddenText'}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet orci purus. Vestibulum commodo vulputate dignissim. Quisque ante ipsum, tempus eu tempus in, vulputate sit amet arcu. Vestibulum egestas nisl felis, vel convallis quam suscipit eu. Curabitur metus est, vehicula eget pulvinar a, aliquet nec odio. Aliquam eget tort...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet orci purus. Vestibulum commodo vulputate dignissim. Quisque ante ipsum, tempus eu tempus in, vulputate sit amet arcu. </p>
+              <p className={'hiddenText'}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet orci purus. Vestibulum commodo vulputate dignissim. Quisque ante ipsum, tempus eu tempus in, vulputate sit amet arcu. Vestibulum egestas nisl felis, vel convallis quam suscipit eu. Curabitur metus est, vehicula eget pulvinar a, aliquet nec odio. Aliquam eget tort...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet orci purus. Vestibulum commodo vulputate dignissim. Quisque ante ipsum, tempus eu tempus in, vulputate sit amet arcu. </p>
             </DescSection>
             <ProgramSection>
               <h3>Программа</h3>

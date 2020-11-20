@@ -28,8 +28,9 @@ const Courses = () => {
         <Caption>
           <Title>Курсы</Title>
           <AddCourse>
-            <Link to='/addCourses'>Добавить курс</Link>
-            <img src={plus} alt="icon"/>
+            <Link to='/addCourses'>Добавить курс
+              <img src={plus} alt="icon"/>
+            </Link>
           </AddCourse>
         </Caption>
         <Caption>

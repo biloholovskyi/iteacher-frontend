@@ -11,8 +11,9 @@ const NoneCourses = () => {
       <img src={square} alt="image"/>
       <p>У вас нет запланированых занятий</p>
       <AddCourse>
-        <Link to='/addCourses'>Добавить курс</Link>
-        <img src={plus} alt="icon"/>
+        <Link to='/addCourses'>Добавить курс
+          <img src={plus} alt="icon"/>
+        </Link>
       </AddCourse>
     </NonoCoursesWrap>
   )
