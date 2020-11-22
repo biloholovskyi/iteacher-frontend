@@ -9,6 +9,9 @@
   /* background-color: #F8F9FB; */
   /*-webkit-font-smoothing: antialiased;*/
 }
+body {
+  background-color: #F8F9FB;
+}
 :root {
   --mainBlue: #4F7FFF;
   --mainWhite: #fff;
