@@ -87,7 +87,7 @@ const Header = ({active}) => {
         <Link to="/homework">Домашние задания</Link>
         {/* <NavLink>Курсы</NavLink> */}
         <Link to="/courses">Курсы</Link>
-        <NavLink>Полезное</NavLink>
+        <Link to="/usefull">Полезное</Link>
       </NavLinks>
       <AvatarBlock>
         <img className="bell" src={bell} alt="img"/>

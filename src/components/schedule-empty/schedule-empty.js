@@ -6,8 +6,8 @@ const ScheduleEmpty = () => {
     <ScheduleEmptyContainer>
       <Schedule>
         <div className="border"></div>
-        <div className="title">У вас нет расписания</div>
-        {/* <div className="desription">Добавьте учеников к вашим курсам</div> */}
+        <div className="title">У вас нет запланированных занятий</div>
+        <div className="desription">Дождитесь пока преподователь создаст расписание</div>
       </Schedule>
     </ScheduleEmptyContainer>
   );
@@ -25,6 +25,9 @@ const ScheduleEmptyContainer = styled.div`
   background-color: #F8F9FB;
 `
 const Schedule = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   .border {
     border-radius: 16px;
     width: 360px;

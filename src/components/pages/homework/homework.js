@@ -24,7 +24,6 @@ const HomeworkContainer = styled.div`
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
-  height: 100vh;
   background-color: #F8F9FB;
 `
 const Title = styled.h1`
