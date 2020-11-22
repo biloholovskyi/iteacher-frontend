@@ -32,7 +32,7 @@ const NavList = styled.nav`
       font-weight: normal;
       font-size: 16px;
       line-height: 22px;
-      color: #111111;
+      color: #707070;
       letter-spacing: -0.01em;
       margin-right: 40px;
       text-decoration: none;
@@ -41,6 +41,10 @@ const NavList = styled.nav`
         margin-right: 0;
       }
     }
+    & a.active {
+      color: #111!important;
+      font-weight: normal!important;
+      }
 `
 const AvatarBlock = styled.div`
     display: flex;

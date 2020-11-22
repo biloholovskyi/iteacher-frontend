@@ -62,7 +62,104 @@ const CalendarBody = styled.div`
       line-height: 20px;
       color: #FFFFFF;
       cursor: pointer;
+      margin-top: 60px;
     }
 `
-
-export {CalendarModalWrapp, CalendarBody}
+// calendar style
+const CalendarWrap = styled.div`
+  width: 100%;
+  height: 100%;
+  header {
+      display: flex;
+      align-items: center;
+      padding: 0 24px;
+      padding-bottom: 24px;
+      background-color: #fff;
+      img {
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+      object-position: center;
+      margin-right: 12px;
+      }
+      div {
+          background-color: #fff;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 22px;
+          letter-spacing: -0.01em;
+           color: #111111;
+          min-width: 115px;
+          margin-right: 30px;
+      }
+      button {
+          background-color: #fff;
+          border: none;
+          cursor: pointer;
+          margin-left: 8px;
+          width: 24px;
+          height: 24px;
+          img {
+          width: 24px;
+          height: 24px;
+          object-fit: contain;
+          background-color: #fff;
+          }
+          & .prev {
+            transform: rotate(180deg);
+          }
+      }
+  }
+  table {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border-collapse: collapse;
+    thead {
+      tr {
+        th {
+        background-color: #fff;
+        padding-bottom: 16px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: #111111;
+        }
+      }
+    }
+    tbody {
+    .week {background-color: red}
+      tr {
+        td {
+          background-color: #fff;
+          border: 1px solid #DDE1E6;
+          padding-left: 10px;
+          padding-top: 10px;
+          cursor: pointer;
+          div {
+            width: 32px;
+            height: 32px;
+            text-align: center;
+            color: #697077;
+             font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 32px;
+            background-color: #fff;
+            margin-top: -30px;
+          }
+        }
+        & .today {
+          div {
+          background-color:  #4F7FFF;
+         color: #fff;
+         border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+`
+export {CalendarModalWrapp, CalendarBody,CalendarWrap}
