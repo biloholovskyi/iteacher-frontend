@@ -386,9 +386,32 @@ const initialState = {
     video: "",
     description: "",
   },
+  itemsHomeWork: [
+    {
+      id: 1,
+      title: "Lesson name",
+      date: "Nov 23 2020 09:00",//Дата сдачи ДЗ(пока так). нужно найти как правильно выводить дату сдачи ДЗ????
+      action: true, // приступали ли вообще к ДЗ, надо переименновать переменную!!!!!!
+      runNow: false,
+    },
+    {
+      id: 2,
+      title: "Lesson name",
+      date: "Nov 25 2020 09:00",
+      action: true,
+      runNow: true,
+    },
+    {
+      id: 3,
+      title: "Lesson name",
+      date: "Nov 26 2020 09:00",
+      action: false,
+      runNow: false,
+    },
+  ],
   active: false, // флаг открыт или нет модальное окно?
   schedule: true, // флаг есть ли расписание или нет?
-  HW: false // флаг есть ли домашняя работа?
+  HW: true // флаг есть ли домашняя работа?
 }
 
 const reducer = (state = initialState, action) => {

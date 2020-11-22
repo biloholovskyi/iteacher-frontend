@@ -27,7 +27,7 @@ const ItemsLessons = ({ hendleItemLesson, active, lessons }) => {
             </DateTime>
             <Title className="item-lesson_title">{item.title}</Title>
             {/* отсчет времени */}
-            <BackTime time={item.date}/>
+            <BackTime time={item.date} />
             {!item.hw && // флаг выполнености Дом Задания
               <span className="item-lesson_hwfalse">
                 <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
