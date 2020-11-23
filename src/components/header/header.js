@@ -19,7 +19,7 @@ const Header = () => {
         <NavLink to='/students'>Ученики</NavLink>
         <NavLink to='/homework'>Домашние задания</NavLink>
         <NavLink to='/courses' >Курсы</NavLink>
-        <NavLink to='/NoneCourse'>Полезное</NavLink>
+        <NavLink to='/StudentEmpty'>Полезное</NavLink>
       </NavList>
       <AvatarBlock>
         <img className="bell" src={bell} alt="img"/>

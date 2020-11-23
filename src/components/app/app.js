@@ -12,6 +12,8 @@ import SingleCourses from "../pages/singleCourses/singleCourses";
 import CourseEmpty from "../pages/courseEmpty/courseEmpty";
 import SignIn from "../pages/signIn/signIn";
 import NoneCourse from '../pages/noneCourses/noneCourses';
+import StudentEmpty from "../pages/studentEmpty/studentEmpty";
+
 // general style
 import './app.css';
 
@@ -31,6 +33,7 @@ const App = () => {
         <Route path='/courseEmpty' exact component={CourseEmpty}/>
         <Route path='/SignIn' exact component={SignIn}/>
         <Route path='/NoneCourse' exact component={NoneCourse}/>
+        <Route path='/StudentEmpty' exact component={StudentEmpty}/>
       </Switch>
     </>
   )
