@@ -4,7 +4,7 @@ import styled from "styled-components";
 const Students = () => {
   return (
     <StudentsWrap>
-      <p>Ученики</p>
+      <p>Ученик2</p>
     </StudentsWrap>
   )
 }
