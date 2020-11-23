@@ -32,7 +32,6 @@ const AddCourse = styled.button`
   background: #4F7FFF;
   box-shadow: 0px 0px 1px rgba(105, 112, 119, 0.12), 0px 1px 2px rgba(105, 112, 119, 0.2);
   border-radius: 6px;
-  padding: 14px 20px;
   border: none;
   position: relative;
   display: flex;
@@ -56,6 +55,10 @@ const AddCourse = styled.button`
   color: #FFFFFF;
   text-decoration: none;
   background-color: transparent;
+      align-items: center;
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 14px 20px;
   }
 `
 export {NonoCoursesWrap, AddCourse}

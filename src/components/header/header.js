@@ -1,4 +1,5 @@
 import React from "react";
+import { Link , NavLink} from "react-router-dom";
 import styled from "styled-components";
 import { connect  } from 'react-redux';
 
@@ -8,7 +9,6 @@ import {AvatarBlock,NavList, Logo, HeaderWrap} from './headerStyle';
 // images/icon
 import bell from '../../assets/media/icon/content.png';
 import ava from '../../assets/media/icon/avatar.png';
-import { Link } from "react-router-dom";
 
 // const Header = ({active}) => {
 //   return (
@@ -30,11 +30,11 @@ const Header = () => {
         <Logo>Logo</Logo>
       </Link>
       <NavList>
-        <Link to='/schedule'>Расписание</Link>
-        <Link to='/students'>Ученики</Link>
-        <Link to='/homework'>Домашние задания</Link>
-        <Link to='/courses' >Курсы</Link>
-        <Link to='/NoneCourse'>Полезное</Link>
+        <NavLink to='/schedule'>Расписание</NavLink>
+        <NavLink to='/students'>Ученики</NavLink>
+        <NavLink to='/homework'>Домашние задания</NavLink>
+        <NavLink to='/courses' >Курсы</NavLink>
+        <NavLink to='/NoneCourse'>Полезное</NavLink>
       </NavList>
       <AvatarBlock>
         <img className="bell" src={bell} alt="img"/>

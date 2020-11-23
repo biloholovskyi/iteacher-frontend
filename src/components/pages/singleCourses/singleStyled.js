@@ -170,14 +170,21 @@ padding-bottom: 28px;
     font-weight: normal;
     font-size: 16px;
     line-height: 24px;
-    letter-spacing: -0.01em;
-      color: #111111;
-      a {
-        display: inline-block;
+    letter-spacing: -0.01em; 
+      color: #111;
+      height: ${props => props.show ? 'fit-content' : '72px'}; 
+      display: inline;
+  }
+  button {
+        display: ${props => props.show ? 'none' : 'inline-block'};
         color: #4F7FFF;
         cursor: pointer;
+        background-color: transparent;
+        border: none;
       }
-  }
+      .hiddenText {
+        display: ${props => props.show ? 'block' : 'none'};
+      }
 `
 
 const ProgramSection = styled.div`
@@ -268,4 +275,4 @@ const ProgramItemWrap = styled.div`
    }
 `
 
-export {ProgramItemWrap,ProgramSection, SingleCoursesWrap, Banner, InfoBlock, DescSection,WithOutHeaderContainer}
+export {ProgramItemWrap, ProgramSection, SingleCoursesWrap, Banner, InfoBlock, DescSection, WithOutHeaderContainer}
