@@ -1,5 +1,7 @@
 import React from "react";
 import { Link , NavLink} from "react-router-dom";
+import styled from "styled-components";
+import { connect  } from 'react-redux';
 
 // styled
 import {AvatarBlock,NavList, Logo, HeaderWrap} from './headerStyle';
@@ -8,6 +10,19 @@ import {AvatarBlock,NavList, Logo, HeaderWrap} from './headerStyle';
 import bell from '../../assets/media/icon/content.png';
 import ava from '../../assets/media/icon/avatar.png';
 
+// const Header = ({active}) => {
+//   return (
+//     <HeaderWrap active={active}>
+//       <Logo>Logo</Logo>
+//       <NavLinks>
+//         <Link to="/schedule">Расписание</Link>
+//         <NavLink>Ученики</NavLink>
+//         {/* <NavLink>Домашние задания</NavLink> */}
+//         <Link to="/homework">Домашние задания</Link>
+//         {/* <NavLink>Курсы</NavLink> */}
+//         <Link to="/courses">Курсы</Link>
+//         <Link to="/usefull">Полезное</Link>
+//       </NavLinks>
 const Header = () => {
   return (
     <HeaderWrap>
@@ -28,5 +43,9 @@ const Header = () => {
     </HeaderWrap>
   )
 }
-
-export default Header;
+const mapStateToProps = ({ active }) => {
+  return {
+    active
+  }
+}
+export default connect(mapStateToProps)(Header);

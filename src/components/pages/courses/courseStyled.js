@@ -50,8 +50,8 @@ const AddCourse = styled.button`
 `
 const SearchBlock = styled.div`
    display: flex;
-    align-items: center;
-    justify-content: center;
+  align-items: center;
+  justify-content: center;
 `
 const Input = styled.div`
       display: flex;
