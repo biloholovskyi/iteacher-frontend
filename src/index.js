@@ -6,7 +6,6 @@ import App from './components/app/app';
 import ErrorBoundry from "./components/errorBoundry/errorBoundry";
 import store from './store';
 
-
 ReactDOM.render(
   <Provider store={store}>
     <ErrorBoundry>
