@@ -1,10 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
-
-import Header from "../header/header";
-import Homework from '../pages/homework';
-import Courses from "../pages/courses/courses";
-import Schedule from '../pages/schedule';
+import {BrowserRouter as Router} from 'react-router-dom';
 import UseFull from '../pages/use-full';
 
 
@@ -14,7 +9,7 @@ import Home from '../pages/home/Home';
 import Header from '../header/header';
 import Schedule from "../pages/schedule/schedule";
 import Students from "../pages/students/students";
-import HomeWork from "../pages/homeWork/homeWork";
+import HomeWork from "../pages/homework";
 import Selection from "../pages/selection/selection";
 import AddCourses from "../pages/addCourses/addCourses";
 import SingleCourses from "../pages/singleCourses/singleCourses";
@@ -27,14 +22,14 @@ import './app.css';
 const App = () => {
   return (
     <>
-//       <Router>
-//         <Header/>
-//         <Route path="/schedule" component={Schedule} />
-//         <Route path="/homework" component={Homework} />
-//         <Route path="/courses" component={Courses} />
-//         <Route path="/usefull" component={UseFull} />
-//         {/* <Courses/> */}
-//       </Router>
+{/*//       <Router>*/}
+{/*//         <Header/>*/}
+{/*//         <Route path="/schedule" component={Schedule} />*/}
+{/*//         <Route path="/homework" component={Homework} />*/}
+{/*//         <Route path="/courses" component={Courses} />*/}
+{/*//         <Route path="/usefull" component={UseFull} />*/}
+{/*//         /!* <Courses/> *!/*/}
+{/*//       </Router>*/}
       <Header />
       <Switch>
         <Route path='/' exact component={Home}/>

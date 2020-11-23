@@ -26,7 +26,7 @@ const ScheduleContainer = styled.div`
   padding: 24px 48px;
   max-width: 1440px;
   width: 100%;
-  margin: 0 auto;
+  margin: 80px auto 0 auto;
   display: flex;
   justify-content: space-between;
   background-color: #F8F9FB;
