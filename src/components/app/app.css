@@ -30,4 +30,7 @@ body {
 #root {
   position: relative;
   background-color: #F8F9FB;
+
+.active {
+  font-weight: bold!important;
 }

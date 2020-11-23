@@ -1,5 +1,7 @@
 import React from 'react';
 import {CoursesItems} from './CoursesItem';
+import {CoursesItemsV2} from './CoursesItemV2';
+import { Link } from "react-router-dom";
 // style
 import {
   DropDown,
@@ -10,8 +12,7 @@ import {
   CourseWrap,
   Title,
   SortBlock,
-  CoursesList,
-  CoursesItem
+  CoursesList
 } from './courseStyled';
 
 // image/icon
@@ -24,40 +25,37 @@ const Courses = () => {
   return (
     <CourseWrap>
       <div className='container'>
-        <div className="row">
-          <div className="col-12">
-            <Caption>
-              <Title>Курсы</Title>
-              <AddCourse>Добавить курс
-                <img src={plus} alt="icon"/>
-              </AddCourse>
-            </Caption>
-            <Caption>
-              <SearchBlock>
-                <Input>
-                  <img src={search} alt="icon"/>
-                  <input type="text" placeholder="Поиск"/>
-                </Input>
-                <DropDown>
-                  <p>Ученики</p>
-                  <img src={arrow} alt="icon"/>
-                </DropDown>
-              </SearchBlock>
-              <SortBlock>
-                <img src={sort} alt="icon"/>
-                <p>Сортировать по</p>
-                <p><b>алфавиту</b></p>
-                <img src={arrow} alt="icon"/>
-              </SortBlock>
-            </Caption>
-             {/*ADD COURSES LIST*/}
-            <CoursesList>
-              <CoursesItems/>
-              <CoursesItems/>
-              <CoursesItems/>
-            </CoursesList>
-          </div>
-        </div>
+        <Caption>
+          <Title>Курсы</Title>
+          <AddCourse>
+            <Link to='/addCourses'>Добавить курс</Link>
+            <img src={plus} alt="icon"/>
+          </AddCourse>
+        </Caption>
+        <Caption>
+          <SearchBlock>
+            <Input>
+              <img src={search} alt="icon"/>
+              <input type="text" placeholder="Поиск"/>
+            </Input>
+            <DropDown>
+              <p>Ученики</p>
+              <img src={arrow} alt="icon"/>
+            </DropDown>
+          </SearchBlock>
+          <SortBlock>
+            <img src={sort} alt="icon"/>
+            <p>Сортировать по</p>
+            <p><b>алфавиту</b></p>
+            <img src={arrow} alt="icon"/>
+          </SortBlock>
+        </Caption>
+        {/*ADD COURSES LIST*/}
+        <CoursesList>
+          <CoursesItems/>
+          <CoursesItems/>
+          <CoursesItemsV2/>
+        </CoursesList>
       </div>
     </CourseWrap>
   )
