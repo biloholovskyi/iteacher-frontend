@@ -11,6 +11,8 @@ import {
   MainContent,
   Plans,
   InfoList } from './courseEmptyStyled';
+// styled
+import ok from '../../../assets/media/icon/ok.svg';
 
 export  default  class CourseEmpty extends Component {
   constructor(props) {
@@ -33,7 +35,8 @@ export  default  class CourseEmpty extends Component {
       stepTwo: false,
       stepThree: false,
       finish: false,
-      activeSidebar: false
+      activeSidebar: false,
+      success: false
     };
       document.body.addEventListener('click', (e) => this.closeModalBody(e));
   }
@@ -81,12 +84,26 @@ export  default  class CourseEmpty extends Component {
     this.setState(() => {
       return {
         ...this.state,
+        success: true,
         invite: false,
         step: false,
-        stepTwo: true
+        stepTwo: false
       }
     })
+    setTimeout(()=>{
+      this.setState(() => {
+        return {
+          ...this.state,
+          invite: false,
+          step: false,
+          stepTwo: true,
+          success: false
+        }
+      })
+    }, 1500);
   }
+
+  // last step on sidebar
   finish = () => {
     this.setState(() => {
       return {
@@ -162,6 +179,25 @@ export  default  class CourseEmpty extends Component {
 
            {/*SIDEBAR STEP 1/3*/}
           {
+            // success modal for add student
+            this.state.success
+              ? <RightAsideWrap>
+                <div className={'icons'}><div><img src={ok} alt="icon"/></div></div>
+                <div className="stepBlock">
+                  <div className={'step'}>1</div>
+                  <div className={'split'}>/</div>
+                  <div className={'step'}>3</div>
+                </div>
+                <div className="title">Пригласите ученика</div>
+                <button
+                  onClick={() => this.openInvite()}
+                  className={'showModal'} >
+                  Добавить ученика
+                </button>
+              </RightAsideWrap>
+              : null
+          }
+          {
             this.state.step
               ?  <RightAsideWrap>
                     <div className={'icons'}><p>👩</p></div>
@@ -189,7 +225,7 @@ export  default  class CourseEmpty extends Component {
                   <div className={'split'}>/</div>
                   <div className={'step'}>3</div>
                 </div>
-                <div className="title">Пригласите ученика</div>
+                <div className="title">Назначьте первое занятие</div>
                 <button
                   onClick={() => this.openCalendar()}
                   className={'showModal'} >

@@ -120,6 +120,7 @@ const CoursesList = styled.div`
     justify-content: center;
     width: 100%;
     flex-direction: column;
+    padding-right: ${props => props.padding ? '10%' : '0'};
 `
 const CoursesItem = styled.div`
     width: 100%;
@@ -132,7 +133,7 @@ const CoursesItem = styled.div`
     padding: 19px 24px;
      background-color: #fff;
      cursor: pointer;
-     max-width: ${props => props.width ? '774px' : '100%'};
+     max-width: ${props => props.width ? '80%' : '100%'};
      position: relative;
      z-index: 11;
     .right {
@@ -286,7 +287,7 @@ const NotesWrap = styled.div`
 const Notes = styled.div`
      background: #fff;
       width: 100%;
-      max-width: 594px;
+      max-width: 27%;
       min-height: 100vh;
       height: 100%;
       position: absolute;
@@ -298,6 +299,7 @@ const Notes = styled.div`
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      transition: .4s;
     .notesHeader {
       width: 100%;
       display: flex;
@@ -326,9 +328,10 @@ const Notes = styled.div`
       }
     }
 `
-const InputWrap = styled.div`
+const InputWrap = styled.form`
     padding: 0 24px;
     background-color: #fff;
+    position: relative;
   input {
       width: 100%;
       background: #DDE1E6;
@@ -354,6 +357,82 @@ const InputWrap = styled.div`
       opacity: 0.8;
     }
   }
+  .add {
+      position: absolute;
+      right: 25px;
+      height: 100%;
+      border: none;
+      background: #4F7FFF;
+      border-radius: 8px;
+      width: 48px;
+      cursor: pointer;
+      img {
+        width: 24px;
+        height: 24px;
+        object-position: center;
+        object-fit: contain;
+        background-color: transparent;
+      }
+  }
+`
+const NotesBody = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 0 24px;
+  background-color: #fff;
+  overflow: auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+`
+const NotesItemWrap = styled.div`
+  background-color: #fff;
+  padding: 24px 0;
+`
+const Data = styled.div`
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.01em;
+  color: #697077;
+  margin-bottom: 8px;
+  background-color: #fff;
+`
+const Message = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: #fff;
+  padding: 12px 16px;
+  border: 1px solid #DDE1E6;
+  border-radius: 8px;
+  .text {
+    background-color: #fff;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: -0.01em;
+    color: #111111;
+    margin-bottom: 8px;
+  }
+  button {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.01em;
+  color: #DA1E28;
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+  }
 `
 export {
   DropDown,
@@ -367,5 +446,9 @@ export {
   CoursesItem,
   Notes,
   NotesWrap,
-  InputWrap
+  InputWrap,
+  NotesBody,
+  NotesItemWrap,
+  Data,
+  Message
 }

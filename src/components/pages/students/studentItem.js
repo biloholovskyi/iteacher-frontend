@@ -15,27 +15,26 @@ const StudentItem = ({number, open, note,activeNoteBlock}) => {
       width={activeNoteBlock} >
       <div
         className="right">
-        <button
-          onClick={(e) => open(e)}
+        <div
           className="right__name">
           <img src={ava} alt="img"/>
           <div className="names">
             <h3>Cameron Jackson</h3>
             <p>cameron.jackson@example.com</p>
           </div>
-        </button>
+        </div>
         <div className="navSection">
           <div className="lesson">
             {
               number === 0
-                ?  <img src={lesson2} alt="icon"/>
-                :  <img src={lesson} alt="icon"/>
+                ?  <img onClick={(e) => note(e)}  src={lesson2} alt="icon"/>
+                :  <img onClick={(e) => note(e)}  src={lesson} alt="icon"/>
             }
             <div className='number'>{number}</div>
           </div>
           <button
             className="more"
-            onClick={(e) => note(e)}
+            onClick={(e) => open(e)}
           ><img src={more} alt="img"/></button>
         </div>
       </div>

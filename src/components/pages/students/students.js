@@ -59,11 +59,11 @@ export default class Students extends Component {
   }
   // close modal on click body
   closeModalBody = (e) => {
-    const block = document.querySelector('.studentModal');
+    const block = document.querySelector('.studentModals');
     if(block === null) {
       return
     }
-    const button = document.querySelector('.right__name');
+    const button = document.querySelector('.more');
     const status = e.target === block || block.contains(e.target);
     const statusModal = e.target === button;
 
@@ -102,7 +102,7 @@ export default class Students extends Component {
             </SortBlock>
           </Caption>
           {/*ADD students LIST*/}
-          <CoursesList>
+          <CoursesList padding={this.state.notes}>
             <StudentItem
               activeNoteBlock={this.state.notes}
               open={this.openModal}

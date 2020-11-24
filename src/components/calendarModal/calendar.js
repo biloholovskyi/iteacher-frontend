@@ -60,9 +60,8 @@ export default class Calendar extends Component {
   };
 
   render() {
-    const { years, monthNames, weekDayNames } = this.props;
-    const { currentDate, selectedDate } = this.state;
-    const { date } = this.state;
+    const { years, monthNames, weekDayNames, finish } = this.props;
+    const { currentDate, selectedDate, date } = this.state;
 
     const monthData = calendar.getMonthData(this.year, this.month);
 
@@ -74,25 +73,6 @@ export default class Calendar extends Component {
             {monthNames[date.getMonth()]},
             {date.getFullYear()}
           </div>
-          {/*<select*/}
-          {/*  ref={element => this.monthSelect = element}*/}
-          {/*  value={this.month}*/}
-          {/*  onChange={this.handleSelectChange}*/}
-          {/*>*/}
-          {/*  {monthNames.map((name, index) =>*/}
-          {/*    <option key={name} value={index}>{name}</option>*/}
-          {/*  )}*/}
-          {/*</select>*/}
-
-          {/*<select*/}
-          {/*  ref={element => this.yearSelect = element}*/}
-          {/*  value={this.year}*/}
-          {/*  onChange={this.handleSelectChange}*/}
-          {/*>*/}
-          {/*  {years.map(year =>*/}
-          {/*    <option key={year} value={year}>{year}</option>*/}
-          {/*  )}*/}
-          {/*</select>*/}
           <button onClick={this.handlePrevMonthButtonClick}><img className={'prev'} src={calendarArrow} alt="icon"/></button>
           <button onClick={this.handleNextMonthButtonClick}><img className={'next'} src={calendarArrow} alt="icon"/></button>
         </header>
@@ -117,7 +97,12 @@ export default class Calendar extends Component {
                     'selected': calendar.areEqual(date, selectedDate)
                   })}
                   onClick={() => this.handleDayClick(date)}
-                ><div>{date.getDate()}</div></td>
+                ><div
+                  className={'tdContainer'}
+                  onClick={(e) => {finish(e)}}>
+                  <div className={'d'}>{date.getDate()}</div>
+                </div>
+                 </td>
                 :
                 <td key={index} className={'disable'} ></td>
               )}

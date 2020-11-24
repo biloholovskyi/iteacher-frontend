@@ -71,6 +71,22 @@ const RightAsideWrap = styled.div`
       line-height: 20px;
       background-color: transparent;
     }
+    div {
+    width: 56px;
+    height: 56px;
+    background-color: #24A148;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+      img {
+        width: 24px;
+        height: 24px;
+        object-fit: contain;
+        object-position: center;
+        background-color: transparent;
+      }
+    }
   }
   .stepBlock {
     display: flex;

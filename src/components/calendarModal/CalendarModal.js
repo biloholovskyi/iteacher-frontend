@@ -11,11 +11,13 @@ const CalendarModal = ({ close, finish }) => {
       <CalendarBody className={'studentModal'}>
         <img className={'close'} src={closed} alt="icon" onClick={(e) => {close(e)}}/>
         <h3>Выберите дни занятий</h3>
-        <Calendar/>
-        <button
-          className={'addLesson'}
-          onClick={(e) => {finish(e)}}
-        >Добавить 1 урок в календарь</button>
+        <Calendar
+          finish={finish}
+        />
+        {/*<button*/}
+        {/*  className={'addLesson'}*/}
+        {/*  onClick={(e) => {finish(e)}}*/}
+        {/*>Добавить 1 урок в календарь</button>*/}
       </CalendarBody>
     </CalendarModalWrapp>
   )

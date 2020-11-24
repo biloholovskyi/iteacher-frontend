@@ -45,7 +45,7 @@ const CalendarBody = styled.div`
       line-height: 36px;
       letter-spacing: -0.01em;
       color: #000000;
-      margin-bottom: 24px;
+      margin-bottom: 15px;
     }
     .addLesson {
       width: 100%;
@@ -73,7 +73,7 @@ const CalendarWrap = styled.div`
       display: flex;
       align-items: center;
       padding: 0 24px;
-      padding-bottom: 24px;
+      padding-bottom: 15px;
       background-color: #fff;
       img {
       width: 24px;
@@ -112,7 +112,7 @@ const CalendarWrap = styled.div`
       }
   }
   table {
-    width: 100%;
+    width: 99.9%;
     height: 100%;
     background: #fff;
     border-collapse: collapse;
@@ -130,7 +130,7 @@ const CalendarWrap = styled.div`
       }
     }
     tbody {
-    .week {background-color: red}
+    .week {}
       tr {
         td {
           background-color: #fff;
@@ -138,28 +138,45 @@ const CalendarWrap = styled.div`
           padding-left: 10px;
           padding-top: 10px;
           cursor: pointer;
-          div {
-            width: 32px;
-            height: 32px;
-            text-align: center;
-            color: #697077;
-             font-style: normal;
-            font-weight: normal;
-            font-size: 16px;
-            line-height: 32px;
-            background-color: #fff;
-            margin-top: -30px;
+          position: relative;
+          width: 80px;
+          height: 80px;
+          .tdContainer {
+              width: 100%;
+              height: 100%;
+              bottom: 0;
+              left: 0;
+              position: absolute;
+              display: flex;
+              align-items: flex-start;
+              justify-content: flex-start;
+              padding-left: 10px;
+              padding-top: 10px;
+              background-color: transparent;
+              .d {
+                  width: 32px;
+                  height: 32px;
+                  text-align: center;
+                  color: #697077;
+                   font-style: normal;
+                  font-weight: normal;
+                  font-size: 16px;
+                  line-height: 32px;
+                  background-color: #fff;
+                }
           }
         }
-        & .today {
-          div {
-          background-color:  #4F7FFF;
-         color: #fff;
-         border-radius: 50%;
-          }
+          & .today {
+             .tdContainer {
+                .d {
+                   background-color:  #4F7FFF;
+                   color: #fff;
+                   border-radius: 50%;
+               }
+             }
+           }
         }
-      }
     }
   }
 `
-export {CalendarModalWrapp, CalendarBody,CalendarWrap}
+export {CalendarModalWrapp, CalendarBody, CalendarWrap}

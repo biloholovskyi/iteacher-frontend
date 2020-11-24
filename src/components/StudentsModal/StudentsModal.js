@@ -13,7 +13,7 @@ const StudentsModal = ({closed}) => {
 
   return (
     <StudentsModalWrap>
-      <StudentModal className='studentModal'>
+      <StudentModal className='studentModals'>
         <img className={'more'} src={more} alt="icon"/>
         <img className={'close'}
              src={close}
