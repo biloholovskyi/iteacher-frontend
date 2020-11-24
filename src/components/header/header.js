@@ -35,6 +35,8 @@ const Header = () => {
         <NavLink to='/homework'>Домашние задания</NavLink>
         <NavLink to='/courses' >Курсы</NavLink>
         <NavLink to='/NoneCourse'>Полезное</NavLink>
+        <Link to="/usefull">Полезное</Link>
+        <Link to="/dictionary">Мой Словарь</Link>
       </NavList>
       <AvatarBlock>
         <img className="bell" src={bell} alt="img"/>

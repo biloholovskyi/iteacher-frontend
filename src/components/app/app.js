@@ -1,6 +1,5 @@
 import React from 'react';
 import {BrowserRouter as Router} from 'react-router-dom';
-import UseFull from '../pages/use-full';
 
 
 import { Route, Switch} from "react-router";
@@ -9,13 +8,15 @@ import Home from '../pages/home/Home';
 import Header from '../header/header';
 import Schedule from "../pages/schedule/schedule";
 import Students from "../pages/students/students";
-import HomeWork from "../pages/homework";
+import HomeWork from '../pages/homework';
 import Selection from "../pages/selection/selection";
 import AddCourses from "../pages/addCourses/addCourses";
 import SingleCourses from "../pages/singleCourses/singleCourses";
 import CourseEmpty from "../pages/courseEmpty/courseEmpty";
 import SignIn from "../pages/signIn/signIn";
 import NoneCourse from '../pages/noneCourses/noneCourses';
+import UseFull from '../pages/use-full';
+import Dictionary from '../pages/dictionary';
 // general style
 import './app.css';
 
@@ -43,6 +44,8 @@ const App = () => {
         <Route path='/courseEmpty' exact component={CourseEmpty}/>
         <Route path='/SignIn' exact component={SignIn}/>
         <Route path='/NoneCourse' exact component={NoneCourse}/>
+        <Route path="/usefull" exact component={UseFull} />
+        <Route path="/dictionary" exact component={Dictionary} />
       </Switch>
     </>
   )

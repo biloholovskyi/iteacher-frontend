@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect  } from 'react-redux';
 
-// import ItemUseFull from '../../item-home-work';
+import ItemUseFull from '../../item-use-full';
 
 import styled from "styled-components";
 
@@ -9,15 +9,15 @@ class UseFull extends React.Component {
   render() {
     const { itemsUseFull } = this.props;
       return (
-        <HomeworkContainer>
+        <UseFullContainer>
           <Title>Полезное</Title>
-          {/* <ItemUseFull itemsUseFull={itemsUseFull}/> */}
-        </HomeworkContainer>
+          <ItemUseFull itemsUseFull={itemsUseFull}/>
+        </UseFullContainer>
       );
   }
 };
-const HomeworkContainer = styled.div`
-  padding: 48px;
+const UseFullContainer = styled.div`
+  padding: 120px 48px;
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;

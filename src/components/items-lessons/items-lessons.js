@@ -6,10 +6,10 @@ import BackTime from '../back-time';
 
 import format from 'date-fns/format'
 import ruLocale from "date-fns/locale/ru";
-import { hendleItemLesson } from '../../action';
+import { hendleItemLesson, hendleModalGrey } from '../../action';
 import { ItemLesson, DateTime, Title } from './items-lessons-style';
 
-const ItemsLessons = ({ hendleItemLesson, active, lessons }) => {
+const ItemsLessons = ({ hendleItemLesson, hendleModalGrey, active, lessons }) => {
   return (
     <ItemsLessonsContainer>{/* Список уроков */}
       {lessons.map((item) => {
@@ -39,7 +39,7 @@ const ItemsLessons = ({ hendleItemLesson, active, lessons }) => {
           </ItemLesson>
         );
       })}
-      <div className={active ? "modalGrey":""}></div>
+      <div id="modal" onClick={()=>hendleModalGrey()} className={active ? "modalGrey":""}></div>
     </ItemsLessonsContainer>
   );
 };
@@ -53,6 +53,9 @@ const mapDispatchToProps = (dispatch) => {
   return {
     hendleItemLesson: (id) => {
       dispatch(hendleItemLesson(id))
+    },
+    hendleModalGrey: () => {
+      dispatch(hendleModalGrey())
     }
   }
 }

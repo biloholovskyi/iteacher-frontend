@@ -390,7 +390,7 @@ const initialState = {
     {
       id: 1,
       title: "Lesson name",
-      date: "Nov 24 2020 09:00",//Дата сдачи ДЗ(пока так). нужно найти как правильно выводить дату сдачи ДЗ????
+      date: "Nov 25 2020 09:00",//Дата сдачи ДЗ(пока так). нужно найти как правильно выводить дату сдачи ДЗ????
       action: true, // приступали ли вообще к ДЗ, надо переименновать переменную!!!!!!
       runNow: false,
     },
@@ -409,9 +409,59 @@ const initialState = {
       runNow: false,
     },
   ],
+  itemsDictionary: [
+    {id:1,img: "img/icon222.png",wordEN: "home",wordRU: "дом"},
+    {id:2,img: "img/icon222.png",wordEN: "apple",wordRU: "яблоко"},
+    {id:3,img: "img/icon222.png",wordEN: "mouse",wordRU: "мышь"}
+  ], 
+  itemsUseFull: [
+    {
+      id: 1,
+      img: "img/use-full/img1.jpg",
+      like: 2,
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eleifend ornare metus",
+      date: "Вчера, 21:01"
+    },
+    {
+      id: 2,
+      img: "img/use-full/img2.jpg",
+      like: 2,
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eleifend ornare metus",
+      date: "Вчера, 21:01"
+    },
+    {
+      id: 3,
+      img: "img/use-full/img3.jpg",
+      like: 2,
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eleifend ornare metus",
+      date: "Вчера, 21:01"
+    },
+    {
+      id: 4,
+      img: "img/use-full/img4.jpg",
+      like: 2,
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eleifend ornare metus",
+      date: "Вчера, 21:01"
+    },
+    {
+      id: 5,
+      img: "img/use-full/img5.jpg",
+      like: 2,
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eleifend ornare metus",
+      date: "Вчера, 21:01"
+    },
+    {
+      id: 6,
+      img: "img/use-full/img6.jpg",
+      like: 2,
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eleifend ornare metus",
+      date: "Вчера, 21:01"
+    },
+  ],
   active: false, // флаг открыт или нет модальное окно?
   schedule: true, // флаг есть ли расписание или нет?
-  HW: true // флаг есть ли домашняя работа?
+  HW: true, // флаг есть ли домашняя работа?
+  dictionary: true,
 }
 
 const reducer = (state = initialState, action) => {
@@ -441,6 +491,15 @@ const reducer = (state = initialState, action) => {
         modal: newItem,
         active: activeNew
       };
+
+    case 'HENDLE_MODAL_GREY':
+      const activeZonaNew = !state.active;
+      state.lessons.forEach((i)=>i.active = false);
+      return {
+        ...state,
+        active: activeZonaNew
+      }
+
     case 'HENDLE_ITEM_HW':
       const idHW = action.payload;
       const idxHW = state.modal.homeWork.findIndex((el) => el.id === idHW);

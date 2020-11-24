@@ -5,6 +5,13 @@ const hendleItemLesson = (idItem) => {
     payload: idItem
   }
 }
+// реакция на нажатие модального окна
+const hendleModalGrey = () => {
+  return {
+    type: 'HENDLE_MODAL_GREY',
+    // payload: idItem
+  }
+}
 // реакция на нажатия галочки дом задания в модальном окне расписания. Уточнить нужен ли он вообще??????????????????
 const hendleHomeWork = (idItem) => {
   return {
@@ -14,5 +21,6 @@ const hendleHomeWork = (idItem) => {
 }
 export {
   hendleItemLesson,
+  hendleModalGrey,
   hendleHomeWork
 }
